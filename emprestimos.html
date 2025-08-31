@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Empréstimos - Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/emprestimos.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sistema de Empréstimos - Biblioteca Digital</h1>
+        </div>
+
+        <!-- Seção de Busca -->
+        <div class="search-section">
+            <div class="search-grid">
+                <div class="search-group">
+                    <label for="userSearch">Buscar Usuário</label>
+                    <input type="text" id="userSearch" placeholder="Nome ou matrícula do usuário">
+                </div>
+                <div class="search-group">
+                    <label for="bookSearch">Buscar Livro</label>
+                    <input type="text" id="bookSearch" placeholder="Título, autor ou código do livro">
+                </div>
+            </div>
+        </div>
+
+        <!-- Alertas -->
+        <div class="alert alert-danger">
+            ⚠️ Este usuário possui empréstimos em atraso.
+        </div>
+
+        <!-- Informações do Usuário e Livro -->
+        <div class="info-section">
+            <div class="info-card">
+                <h3>📋 Informações do Usuário</h3>
+                <div class="info-item">
+                    <span class="info-label">Nome:</span>
+                    <span class="info-value">Ana Silva Santos</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Matrícula:</span>
+                    <span class="info-value">2024001234</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Categoria:</span>
+                    <span class="info-value">Estudante</span>
+                </div>
+            </div>
+
+            <div class="info-card">
+                <h3>📚 Informações do Livro</h3>
+                <div class="info-item">
+                    <span class="info-label">Título:</span>
+                    <span class="info-value">O Pequeno Príncipe</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Autor:</span>
+                    <span class="info-value">Antoine de Saint-Exupéry</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Cópias Disponíveis:</span>
+                    <span class="info-value">3 de 5</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Data de Devolução:</span>
+                    <span class="info-value">15/09/2025</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Botões de Ação -->
+        <div class="actions">
+            <button class="btn-primary">📖 Registrar Empréstimo</button>
+            <button class="btn-success">🔄 Renovar Empréstimo</button>
+            <button class="btn-secondary">❌ Cancelar</button>
+        </div>
+
+        <!-- Tabela de Empréstimos Ativos -->
+        <div class="table-section">
+            <div class="table-header">
+                <h3>📊 Empréstimos Ativos do Usuário</h3>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Livro</th>
+                        <th>Autor</th>
+                        <th>Data Empréstimo</th>
+                        <th>Data Devolução</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dom Casmurro</td>
+                        <td>Machado de Assis</td>
+                        <td>01/08/2025</td>
+                        <td>15/08/2025</td>
+                        <td><span class="status-indicator status-danger">Atrasado</span></td>
+                    </tr>
+                    <tr>
+                        <td>1984</td>
+                        <td>George Orwell</td>
+                        <td>10/08/2025</td>
+                        <td>24/08/2025</td>
+                        <td><span class="status-indicator status-warning">Vence em 6 dias</span></td>
+                    </tr>
+                    <tr>
+                        <td>O Cortiço</td>
+                        <td>Aluísio Azevedo</td>
+                        <td>12/08/2025</td>
+                        <td>26/08/2025</td>
+                        <td><span class="status-indicator status-ok">Em dia</span></td>
+                    </tr>
+                    <tr>
+                        <td>O Pequeno Príncipe</td>
+                        <td>Antoine de Saint-Exupéry</td>
+                        <td>18/08/2025</td>
+                        <td>01/09/2025</td>
+                        <td><span class="status-indicator status-ok">Em dia</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

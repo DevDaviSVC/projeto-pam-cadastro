@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f8f6ff 0%, #ede7f6 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    color: white;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 25px rgba(106, 27, 154, 0.3);
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+/* Seção do Formulário */
+.form-section {
+    background: white;
+    border-radius: 16px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-header {
+    background: linear-gradient(135deg, #7b1fa2, #8e24aa);
+    color: white;
+    padding: 20px 30px;
+    border-bottom: none;
+}
+
+.form-header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.employee-form {
+    padding: 30px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #6a1b9a;
+    font-weight: 600;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
+input, select {
+    padding: 14px 16px;
+    border: 2px solid #e8d5f2;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+    font-family: inherit;
+}
+
+input:focus, select:focus {
+    outline: none;
+    border-color: #8e24aa;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(142, 36, 170, 0.1);
+    transform: translateY(-1px);
+}
+
+select {
+    cursor: pointer;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botões */
+button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+    font-family: inherit;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #8e24aa, #ab47bc);
+    color: white;
+    box-shadow: 0 4px 15px rgba(142, 36, 170, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(142, 36, 170, 0.5);
+}
+
+.btn-secondary {
+    background: #e1bee7;
+    color: #6a1b9a;
+    border: 2px solid #ce93d8;
+}
+
+.btn-secondary:hover {
+    background: #ce93d8;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Seção da Tabela */
+.table-section {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.table-header {
+    background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+    color: white;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.table-header h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.employee-count {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.employees-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.employees-table th,
+.employees-table td {
+    padding: 18px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.employees-table th {
+    background: #f8f5ff;
+    color: #6a1b9a;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Efeito zebra nas linhas */
+.employees-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.employees-table tbody tr:nth-child(odd) {
+    background: white;
+}
+
+.employees-table tbody tr:hover {
+    background: #f3e5f5;
+    transform: scale(1.001);
+    transition: all 0.2s ease;
+}
+
+/* Nome do funcionário com avatar */
+.employee-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #8e24aa, #ab47bc);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* Badges para cargos */
+.badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    display: inline-block;
+    min-width: 90px;
+}
+
+.badge-admin {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.badge-librarian {
+    background: #e8f5e8;
+    color: #2e7d32;
+    border: 1px solid #a5d6a7;
+}
+
+.badge-attendant {
+    background: #fff3e0;
+    color: #f57c00;
+    border: 1px solid #ffcc02;
+}
+
+.badge-supervisor {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #90caf9;
+}
+
+/* Botões de ação */
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-edit, .btn-delete {
+    width: 36px;
+    height: 36px;
+    min-width: auto;
+    padding: 0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.btn-edit {
+    background: #e3f2fd;
+    color: #1976d2;
+    border: 1px solid #90caf9;
+}
+
+.btn-edit:hover {
+    background: #1976d2;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.btn-delete {
+    background: #ffebee;
+    color: #c62828;
+    border: 1px solid #ef9a9a;
+}
+
+.btn-delete:hover {
+    background: #c62828;
+    color: white;
+    transform: translateY(-1px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .header p {
+        font-size: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button {
+        min-width: auto;
+    }
+
+    .table-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .employees-table {
+        font-size: 0.9rem;
+    }
+
+    .employees-table th,
+    .employees-table td {
+        padding: 12px 8px;
+    }
+
+    .employee-name {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .employee-name span {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+        min-width: 70px;
+    }
+}

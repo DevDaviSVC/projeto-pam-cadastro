@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários - Sistema Biblioteca</title>
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1>👥 Cadastro de Funcionários</h1>
+            <p>Sistema de Gerenciamento - Biblioteca Digital</p>
+        </header>
+
+        <!-- Formulário de Cadastro -->
+        <section class="form-section">
+            <div class="form-header">
+                <h2>➕ Novo Funcionário</h2>
+            </div>
+            
+            <form class="employee-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="fullName">Nome Completo</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Digite o nome completo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="employeeId">Matrícula / ID</label>
+                        <input type="text" id="employeeId" name="employeeId" placeholder="Ex: FUNC-2025-001" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="position">Cargo</label>
+                        <select id="position" name="position" required>
+                            <option value="">Selecione um cargo</option>
+                            <option value="atendente">Atendente</option>
+                            <option value="bibliotecario">Bibliotecário(a)</option>
+                            <option value="administrador">Administrador(a)</option>
+                            <option value="auxiliar">Auxiliar</option>
+                            <option value="supervisor">Supervisor(a)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="funcionario@biblioteca.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(11) 99999-9999" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startDate">Data de Admissão</label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">✅ Cadastrar Funcionário</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Tabela de Funcionários -->
+        <section class="table-section">
+            <div class="table-header">
+                <h2>📋 Funcionários Cadastrados</h2>
+                <div class="table-info">
+                    <span class="employee-count">4 funcionários registrados</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="employees-table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Matrícula</th>
+                            <th>Cargo</th>
+                            <th>E-mail</th>
+                            <th>Telefone</th>
+                            <th>Admissão</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="employee-name">
+                                    <div class="avatar">MS</div>
+                                    <span>Maria Silva Santos</span>
+                                </div>
+                            </td>
+                            <td>FUNC-2024-001</td>
+                            <td>
+                                <span class="badge badge-admin">Administradora</span>
+                            </td>
+                            <td>maria.silva@biblioteca.com</td>
+                            <td>(11) 98765-4321</td>
+                            <td>15/01/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit" title="Editar">✏️</button>
+                                    <button class="btn-delete" title="Excluir">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <div class="employee-name">
+                                    <div class="avatar">JS</div>
+                                    <span>João Santos Oliveira</span>
+                                </div>
+                            </td>
+                            <td>FUNC-2024-002</td>
+                            <td>
+                                <span class="badge badge-librarian">Bibliotecário</span>
+                            </td>
+                            <td>joao.santos@biblioteca.com</td>
+                            <td>(11) 97654-3210</td>
+                            <td>20/02/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit" title="Editar">✏️</button>
+                                    <button class="btn-delete" title="Excluir">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="employee-name">
+                                    <div class="avatar">AC</div>
+                                    <span>Ana Carolina Lima</span>
+                                </div>
+                            </td>
+                            <td>FUNC-2024-003</td>
+                            <td>
+                                <span class="badge badge-attendant">Atendente</span>
+                            </td>
+                            <td>ana.carolina@biblioteca.com</td>
+                            <td>(11) 96543-2109</td>
+                            <td>10/03/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit" title="Editar">✏️</button>
+                                    <button class="btn-delete" title="Excluir">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <div class="employee-name">
+                                    <div class="avatar">RF</div>
+                                    <span>Roberto Ferreira Costa</span>
+                                </div>
+                            </td>
+                            <td>FUNC-2024-004</td>
+                            <td>
+                                <span class="badge badge-supervisor">Supervisor</span>
+                            </td>
+                            <td>roberto.ferreira@biblioteca.com</td>
+                            <td>(11) 95432-1098</td>
+                            <td>05/04/2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-edit" title="Editar">✏️</button>
+                                    <button class="btn-delete" title="Excluir">🗑️</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
